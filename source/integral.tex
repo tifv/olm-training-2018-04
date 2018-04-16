@@ -1,0 +1,69 @@
+% $groups$delegate: false
+% $groups$delegate$into: false
+% $groups$matter: false
+% $groups$matter$into: false
+
+% $matter[-header,-no-header]:
+% - .[no-header]
+
+% $matter[-matter-guard,no-header]:
+% - verbatim: \begingroup \let\ifsourcelinks\iftrue
+%   condition: source-link
+% - .[matter-guard]
+% - verbatim: \endgroup % \let\ifsourcelinks
+%   condition: source-link
+
+\begingroup
+\providecommand\ifsourcelinks{\iffalse}
+\providecommand\url{\texttt}
+
+\leavevmode\par
+\vfill
+\begin{center}
+\newbox\titlebox
+\begin{lrbox}{\titlebox} \( \displaystyle
+    \int\limits_{\text{2 апреля 2018 г.}}^{\text{14 апреля 2018 г.}}
+        \dbinom
+            {\;\text{Московские сборы}\;}
+            {\;\text{секция математики}\;}
+    \, \mathrm{d} t
+\) \end{lrbox}
+\resizebox{\textwidth}{!}{\usebox{\titlebox}}
+\end{center}\par
+\vfill
+\clearpage
+
+
+%\subsection*{Немного о~группах}
+
+
+\subsection*{Немного о~структуре}
+
+Материалы разбиты по~группам, в~пределах каждой группы отсортированы по~темам:
+\begin{itemize}
+    \item \emph{тренировочные олимпиады;}
+    \item алгебра;
+    \begin{itemize}
+        \item теория чисел;
+        \item многочлены;
+        \item неравенства;
+    \end{itemize}
+    \item геометрия;
+    \item комбинаторика;
+    \begin{itemize}
+        \item теория графов.
+    \end{itemize}
+\end{itemize}
+
+Материалы, общие для нескольких групп, дублируются.
+\ifsourcelinks
+Все материалы сопровождаются ссылками на~исходные файлы \LaTeX.
+\fi
+
+
+%\subsection*{Немного об~авторах}
+
+
+\endgroup % \def\ifsourcelinks \def\url
+
+

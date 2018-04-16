@@ -1,0 +1,60 @@
+!!omap
+
+- $large$common$timetable: true
+- $common$timetable: &common-timetable !!omap
+  - 2018-04-02: [   2, 3]
+  - 2018-04-03: [1, 2, 3]
+  - 2018-04-04: [1, 2, 3]
+  - 2018-04-05: [1, 2   ]
+  - 2018-04-06: [1, 2, 3]
+  - 2018-04-07: [1, 2, 3]
+  - 2018-04-08: [       ]
+  - 2018-04-09: [1, 2, 3]
+  - 2018-04-10: [1, 2, 3]
+  - 2018-04-11: [1, 2   ]
+  - 2018-04-12: [1, 2, 3]
+  - 2018-04-13: [1, 2, 3]
+  - 2018-04-14: [1, 2   ]
+
+- $large$groups[g8]: true
+- $groups[g8]:
+    name: Меркурий
+    code: '8'
+    timetable: *common-timetable
+
+- $large$groups[g9]: true
+- $groups[g9]:
+    name: Венера
+    code: '9'
+    timetable: *common-timetable
+
+- $large$groups[gXj]: true
+- $groups[gXj]:
+    name: Марс
+    code: 'Xj'
+    timetable: *common-timetable
+
+- $large$groups[g10r2]: true
+- $groups[g10r2]:
+    name: Юпитер
+    code: '10-2'
+    timetable: *common-timetable
+
+- $large$groups[g10r1]: true
+- $groups[g10r1]:
+    name: Сатурн
+    code: '10-1'
+    timetable: *common-timetable
+
+- $large$groups[g11]: true
+- $groups[g11]:
+    name: Уран
+    code: '11'
+    timetable: *common-timetable
+
+- $large$groups[gXs]: true
+- $groups[gXs]:
+    name: Нептун
+    code: 'Xs'
+    timetable: *common-timetable
+

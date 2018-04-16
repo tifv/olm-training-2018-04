@@ -1,0 +1,9 @@
+$groups$delegate$into: false
+$groups$delegate: false
+$groups$matter$into: false
+$groups$matter: false
+$style[-announcement-guard]:
+- .[announcement-guard]
+- verbatim: \def\jeolmgroupnames{\large Анонс лекции}
+$style[print,announcement-guard]:
+- ..[resize-to,a6paper,landscape]

@@ -1,0 +1,52 @@
+$groups$matter: true
+
+Integral:
+  $groups$delegate: false
+  $groups$delegate$into: false
+  $groups$matter: false
+  $groups$matter$into: false
+
+  $style:
+  - document class: book
+    options: [10pt, a4paper]
+  - delegate: ..[no-document-class]
+
+  $matter[-add-toc]:
+  - .[add-toc]
+
+  $matter[-integral,add-toc]:
+
+  - error:
+      "'source-link' and 'print' options are incompatible"
+    condition: [source-link, print]
+
+  - preamble package: hyperref
+    condition: -print
+  - preamble verbatim: \hypersetup{colorlinks}
+    provide: hypersetup:colorlinks
+    condition: [source-link, -print]
+
+  - verbatim: \frontmatter
+  - - delegate: /integral[-add-toc]
+  - verbatim: \tableofcontents
+
+  - verbatim: \mainmatter
+  - delegate: .[integral]
+
+  $matter[integral]:
+  - delegate: g8
+  - delegate: g9
+  - delegate: gXj
+  - delegate: g10r2
+  - delegate: g10r1
+  - delegate: g11
+  - delegate: gXs
+
+  g8:    {$training$matter$chapter: true}
+  g9:    {$training$matter$chapter: true}
+  gXj:   {$training$matter$chapter: true}
+  g10r2: {$training$matter$chapter: true}
+  g10r1: {$training$matter$chapter: true}
+  g11:   {$training$matter$chapter: true}
+  gXs:   {$training$matter$chapter: true}
+
